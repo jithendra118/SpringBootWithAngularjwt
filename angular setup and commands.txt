@@ -1,0 +1,169 @@
+
+website: -https://www.javainuse.com/spring/boot-jwt
+https://bezkoder.com/spring-boot-jwt-authentication/
+https://dzone.com/articles/jwt-token-lightweight-token-based-authentication
+
+
+deployment :-https://www.devglan.com/spring-boot/spring-boot-angular-deployment
+
+angular commands  https://www.devglan.com/spring-boot/spring-boot-angular-8-example this project example
+1)npm install
+a)npm install --save-dev @angular-devkit/build-angular
+and b)npm install -g typescript
+2)npm install bootstrap
+
+3)npm install jquery
+4)"styles": ["./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+"scripts": ["./node_modules/jquery/dist/jquery.min.js","./node_modules/bootstrap/dist/js/bootstrap.min.js"] in angular.json
+
+
+
+
+
+environmental variables:-
+ JAVA_HOME :C:\Program Files\Java\jdk-11.0.2
+  MAVEN_HOME:C:\Users\Jithu\Downloads\apache-maven-3.6.0-bin\apache-maven-3.6.0
+  PATH : C:\Program Files\Java\jdk-11.0.2\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Jithu\AppData\Roaming\npm\node_modules\@angular\cli\bin\ng;C:\Users\Jithu\AppData\Roaming\npm;C:\Users\Jithu\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Jithu\Downloads\apache-maven-3.6.0-bin\apache-maven-3.6.0\bin
+  
+  
+  
+  
+  
+  Find below example for creating "directive", "enum", "guard", "interface", "module", "pipe", "service".
+
+ng g directive mydirective
+ng g enum myenum
+ng g guard authguard
+ng g interface ctinterface
+ng g module newmodule
+ng g pipe trimpipe
+ng g service dataservice
+
+
+
+
+
+
+application.properties
+
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.driverClassName=oracle.jdbc.OracleDriver
+spring.datasource.username=system
+spring.datasource.password=jithu
+spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
+spring.jpa.hibernate.ddl-auto= none
+spring.jpa.show-sql=true   
+spring.jpa.properties.hibernate.format_sql=true
+spring.jpa.properties.hibernate.generate_statistics=false
+entitymanager.packagesToScan=com.example.model
+server.port=8083
+
+
+for creating tables initial connect
+SQL*Plus: Release 11.2.0.2.0 Production on Tue Sep 1 23:18:56 2020
+
+Copyright (c) 1982, 2010, Oracle.  All rights reserved.
+
+SQL> conn 
+Enter user-name: system
+Enter password:jithu
+connected.
+
+
+
+to delete oracleservice xe:-commands
+Search Results
+Featured snippet from the web
+1: Click search, type 'cmd' in the search field. 2: when 'cmd' shows up in the list of options, right click it and select 'Run as Administrator'. 4: At the Command Prompt window, type “sc delete OracleServiceXE” without the quotes and press Enter. 7: Type “Exit” and press Enter.
+
+username of db: jithu
+password : jithu
+
+
+
+ @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_Seq")
+	@SequenceGenerator(name="student_Seq", sequenceName = "student_Seq",allocationSize=1)
+	@Column(name = "id", nullable = false)
+	
+	
+for creating sequence for id generator
+CREATE SEQUENCE jithu_seq
+START WITH 100
+INCREMENT BY 1
+MINVALUE 0
+MAXVALUE 100000
+CYCLE ;
+
+CREATE SEQUENCE PRADEEP_seq as BIGNIT
+START WITH 1000
+INCREMENT BY 1
+MINVALUE 1000
+MAXVALUE 100000
+CYCLE ;
+
+create table:-
+private int id;
+    @Column
+    private String firstName;
+    @Column
+    private String lastName;
+    @Column
+    private String username;
+    @Column
+    @JsonIgnore
+    private String password;
+    @Column
+    private long salary;
+    @Column
+    private int age;
+
+    public int getId(
+
+CREATE TABLE USER_Dtls (
+    ID int,
+    last_name varchar(255),
+    first_name varchar(255),
+	user_name varchar(255),
+	password varchar(255),
+	salary long ,
+	age int
+   
+);
+BIGINT
+
+ALTER TABLE Persons
+ADD PRIMARY KEY (ID);
+
+sample table creation format:-
+CREATE TABLE student(
+    id	long,
+    first_name varchar(255),
+    last_name  varchar(255),
+    email_address varchar(255)
+);
+
+ALTER TABLE student
+ADD PRIMARY KEY (ID);
+
+CREATE TABLE image_table( id long, name varchar(255),type varchar(255),picByte BLOB);
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="navbar">
+  <!-- <ul> -->
+    <a [routerLink]="['/home']" routerLinkActive="active">Home</a>
+    <a [routerLink]="['/login']" routerLinkActive="active">Login</a>
+    <button class="btn btn-success" (click)="logout()"> logout</button>
+ <!--  </ul>
+  <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="#"><i class="fa fa-fw fa-search"></i> Search</a>
+  <a href="#"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+  <a href="#"><i class="fa fa-fw fa-user"></i> Login</a> -->
+</div>
